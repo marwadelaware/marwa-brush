@@ -7,7 +7,7 @@
 
     <style>
         #banner {
-            width: 800px;
+            width: 100%;
             height: 150px;
             display: flex;
             justify-self: center;
@@ -19,27 +19,37 @@
             src: url(fonts/atwriter.ttf);
         }
 
+        @font-face {
+            font-family: "Punk";
+            src: url(fonts/Punk_Typewriter.otf);
+        }
+
         #title {
-            font-family: "Atwriter";
+            font-family: "Punk";
             letter-spacing: 20px;
             text-align: center;
             margin: 40px;
+            font-size: 100px;
         }
 
         .check {
             display: flex;
             flex-direction: column;
+            box-sizing: border-box;
+            font-family: "Atwriter";
         }
 
         .other {
-            max-width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            display: block;
-            margin: 0;
+            font-family: "Atwriter";
+            letter-spacing: 2px;
             box-sizing: border-box;
-            padding: 10px 20px;
+            padding: 5px 5px;
             background-color: grey;
+            color: white;
+            width: 100%;
+            text-align: center;
+            
+            
         }
 
         body {
@@ -47,8 +57,19 @@
             overflow-x: hidden;
         }
 
-        * {
-            outline: 1px solid red;
+
+        .websites {
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            gap: 40px;
+            color: pink;
+            margin: 20px;
+        }
+
+        a {
+            color: rgb(49, 42, 46);
+
         }
     </style>
 </head>
@@ -56,8 +77,13 @@
     <img id = "banner" src = "images/cart.jpg">
     <h1 id = "title">the marwa brush</h1>
     <div class = "check">
-        <p class = "other">check out my other websites !! </p>
-        <p class = websites></p>
+        <div class = "other">
+             <p> check out my other websites !! </p>
+        </div>
+        <div class = "websites">
+            <a href = "https://marwadelaware.github.io/personalwebsite/">personal website</a>
+            <a href = "https://marwadelaware.github.io/tutorial-page/">tutorial page</a>
+        </div>
     </div>
 </body>
 </html>
