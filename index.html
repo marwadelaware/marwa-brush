@@ -45,9 +45,11 @@
             box-sizing: border-box;
             padding: 5px 5px;
             background-color: grey;
+            background-image: url("images/stars.jpeg");
             color: white;
             width: 100%;
             text-align: center;
+            text-shadow: 2px 2px 8px #ff006a;;
             
             
         }
@@ -63,7 +65,7 @@
             align-self: center;
             justify-self: center;
             gap: 40px;
-            color: pink;
+            color: rgb(255, 192, 231);
             margin: 20px;
         }
 
@@ -71,7 +73,50 @@
             color: rgb(49, 42, 46);
 
         }
+
+        .stars {
+            height: 50px;
+        }
+
+        #paintCanvas {
+            width: 800px;
+            height: 500px;
+            border: 5px solid rgb(62, 59, 60);
+            display: flex;
+            justify-items: center;
+            align-self: center;
+        }
+
     </style>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById("paintCanvas");
+            const ctx = canvas.getContext("2d")
+
+            let isDrawing = false;
+
+            canvas.addEventListener("mousedown", (event) => {
+                ctx.lineWidth = 5
+                ctx.strokeStyle = "black"
+
+                ctx.beginPath()
+                ctx.moveTo(event.offsetX, event.offsetY)
+
+                isDrawing = true
+            })
+
+            canvas.addEventListener("mousemove", (event) => {
+                if(isDrawing) {
+                    ctx.lineTo(event.offsetX, event.offsetY)
+                    ctx.stroke()
+                }
+            })
+
+            canvas.addEventListener("mouseup", (event) => {
+                isDrawing = false
+            })
+        }
+    </script>
 </head>
 <body>
     <img id = "banner" src = "images/cart.jpg">
@@ -84,6 +129,7 @@
             <a href = "https://marwadelaware.github.io/personalwebsite/">personal website</a>
             <a href = "https://marwadelaware.github.io/tutorial-page/">tutorial page</a>
         </div>
+        <canvas id = "paintCanvas" width = "800" height = "500"></canvas>
     </div>
 </body>
 </html>
