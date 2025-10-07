@@ -1,9 +1,4 @@
 # marwa-brush
-Now, in order to be eligible for the Athena Award, you must have a detailed and descriptive README in your GitHub repo. Doesn't have to be a MLA-formatted essay, but it should have the following:
-What your project is/does (and what it's called)
-Why you made your project
-How you made your project
-What you struggled with and what you learned
 
 Hiii to anyone reading this, my project is the ultimate Marwa Brush, which is definitely would be a lie if you click the link and see that it is like the most basic Javascript brush ever. However, it is a slightly large feat for me, as for a few months after using Javascript in Girls Who Code (GWC), I was like, nope, never again. However, this is a limiting belief, and won't really improve my website-making skills if I'm just super-pro at static websites, so I decided to take on the journey to overcome my fear of Javascript and make a simple, circular brush with a few toggles such as a color, size, transparency (aka alpha, like me), undo, redo, and clear buttons. I also decided to make this project with minimal HTML and CSS because I wanted to focus on the Javascript part (but I do like my websites to be aesthetic).
 
